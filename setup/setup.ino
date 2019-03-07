@@ -1,12 +1,11 @@
+#define led 13
 void setup() {                
-  // Инициализируем цифровой вход/выход в режиме выхода.
-  // Выход 13 на большинстве плат Arduino подключен к светодиоду на плате.
-  pinMode(13, OUTPUT);    
+  pinMode(led, OUTPUT);    
 }
 
 void loop() {
-  digitalWrite(13, HIGH);
+  digitalWrite(led, HIGH);
   delay(1000);
-  digitalWrite(13, LOW);
+  digitalWrite(led, LOW);
   delay(1000);
 }
