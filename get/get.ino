@@ -7,22 +7,26 @@ const char* host = "smart-home.in.ua";
 
 char[] property;
 char[] value;
+
+byte t = 0;
+
+
 void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
  
-  while (WiFi.status() != WL_CONNECTED)
+  while (WiFi.status() != WL_CONNECTED && t != 20)
   {
     delay(500);
+    t++;
   }
 }
 
 void loop()
 { 
   WiFiClient client;
- 
-
+  GETprint("test", "1");
 }
 
 
